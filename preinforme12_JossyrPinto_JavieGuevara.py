@@ -22,8 +22,23 @@ print(mediana)
 Comparacion=  "la media es mayor debido a que los valores se encuentran más concentrados a la izquierda"
 
 print(Comparacion)
-#4
-#5
+
+promedio1 = sum(promSem)/(len(promSem))
+lista1 = [] 
+lista2 = [] 
+for i in promSem:
+    if i > promedio1:
+        posicion = promSem.index(i)
+        lista1.append(posicion+1)
+    else:
+        posicion = promSem.index(i)
+        lista2.append(posicion+1)
+
+print("Las semanas con datos mayores al promedio fue: ",lista1)
+print("las semanas con datos menor al promedio fue: ",lista2)
+print("")
+
+
 #6.1 promedio temperatura
 Temperatura = [(element*510)/(17.16*8.314472) for element in promSem ]
 
@@ -40,5 +55,7 @@ for h in range(len(Temperatura)):
     
 des = (sumatoria/len(Temperatura))**(1/2)
 print("La desviacion estandar es: ", des)
+#Semanas por encima y por debajo del promedio de la temperatura
+
 
 
